@@ -149,17 +149,15 @@ body {
   color: #ddd;
   text-align: center;
 }
-
 /* مربعات السيرة / الانجازات / الاهداف */
 .about-me-box {
   background-color: #1e1e1e;
   color: #fff;
   border-radius: 15px;
   padding: 17px;
-  font-size: 15px;
+  font-size: clamp(14px, 1.2vw, 16px);
   text-align: right;
-  max-width: 360px;
-  width: 90%;
+  width: clamp(320px, 60%, 900px); /* تتوسع حسب حجم الشاشة */
   line-height: 1.7;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: 0.3s;
@@ -172,6 +170,9 @@ body {
   margin-bottom: 8px;
   text-align: center;
   color: #d32f2f;
+  font-size: clamp(18px, 2vw, 22px);
+}
+
 }
 
 /* للشاشات الكبيرة */
@@ -182,7 +183,7 @@ body {
   }
 
   .about-me-box {
-    max-width: 1000px;
-    margin-top: 100px;
+    max-width: 500px;
+    margin-top: 60px;
   }
 }
