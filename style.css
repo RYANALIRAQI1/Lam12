@@ -1,29 +1,28 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #e9f3ff; /* أزرق سماوي فاتح جدًا */
-  color: #1a1a1a;
+  background-color: #121212; /* خلفية داكنة ناعمة */
+  color: #fff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* شريط التنقل السفلي */
+/* ===== شريط التنقل السفلي ===== */
 .navbar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #1b1b1b;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  border-top: 2px solid #5cbdf6; /* أزرق سماوي جميل */
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  border-top: 2px solid #d32f2f; /* أحمر مستوحى من العلم */
 }
 
 .navbar a {
-  color: #555;
+  color: #bbb;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
@@ -31,7 +30,7 @@ body {
 
 .navbar a.active,
 .navbar a:hover {
-  color: #2196f3; /* أزرق فاتح */
+  color: #0b6623; /* أخضر غامق */
 }
 
 /* ===== صفحة الروابط ===== */
@@ -47,9 +46,9 @@ body {
 }
 
 .link-button {
-  background-color: #ffffff;
-  color: #2196f3;
-  border: 2px solid #5cbdf6;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 2px solid #0b6623; /* أخضر غامق */
   border-radius: 12px;
   padding: 14px 30px;
   font-size: 18px;
@@ -57,12 +56,13 @@ body {
   transition: 0.3s;
   width: 220px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .link-button:hover {
-  background-color: #5cbdf6;
+  background-color: #d32f2f; /* أحمر عند التمرير */
   color: #fff;
+  border-color: #d32f2f;
 }
 
 /* ===== صفحة البروفايل ===== */
@@ -79,20 +79,20 @@ body {
   left: 0;
   width: 100%;
   height: 180px;
-  background-color: #cfe9ff; /* أزرق باهت ناعم */
+  background: linear-gradient(to right, #d32f2f, #000, #0b6623);
   background-size: cover;
   background-position: center;
-  border-bottom: 3px solid #5cbdf6;
+  border-bottom: 3px solid #0b6623;
 }
 
 /* الصورة + النص */
 .profile-top {
   position: absolute;
   bottom: -40px;
-  right: 3px;
+  right: 10px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 /* الصورة الشخصية */
@@ -100,11 +100,11 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #f0f8ff;
-  border: 8px solid #5cbdf6;
+  background-color: #222;
+  border: 6px solid #d32f2f;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 /* النص يسار الصورة */
@@ -113,71 +113,70 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  color: #1565c0; /* أزرق داكن أنيق */
+  color: #fff;
   position: relative;
   top: 25px;
   right: -10px;
 }
 
 .username {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
+  color: #0b6623; /* اسم المستخدم باللون الأخضر الغامق */
 }
 
-/* بقية المعلومات تحت */
-.profile-info {
-  margin-top: -30px;
-  padding: 20px;
-  color: #333;
-  text-align: center;
+/* مربع العلم */
+.flag-box {
+  width: 28px;
+  height: 18px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-left: 8px;
+  border: 1px solid #fff;
 }
 
-.member-since {
-  font-size: 14px;
-  color: #777;
-  margin-top: 20px;
+.flag-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* المربعات */
+
+
+/* مربعات السيرة / الانجازات / الاهداف */
 .about-me-box {
-  background-color: #ffffff;
-  color: #1565c0;
-  border-radius: 20px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 15px;
   padding: 17px;
   font-size: 15px;
   text-align: right;
   max-width: 360px;
   width: 90%;
   line-height: 1.7;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   transition: 0.3s;
-  margin-top: 29px;
-  border: 1px solid #d2ecff;
+  margin-top: 25px;
+  border-left: 5px solid #0b6623;
 }
 
 .about-me-box h2 {
   margin-top: 0;
   margin-bottom: 8px;
   text-align: center;
-  color: #2196f3;
+  color: #d32f2f;
 }
 
 /* للشاشات الكبيرة */
 @media (min-width: 1024px) {
   .profile-avatar {
-    width: 200px;
-    height: 200px;
-  }
-
-  .links-container {
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 50px;
+    width: 100px;
+    height: 100px;
   }
 
   .about-me-box {
     max-width: 500px;
-    margin-top: 80px;
+    margin-top: 60px;
   }
 }
