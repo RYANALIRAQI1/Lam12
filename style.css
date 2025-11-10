@@ -1,24 +1,24 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #121212; /* خلفية داكنة ناعمة */
+  background-color: #211414;
   color: #fff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ===== شريط التنقل السفلي ===== */
+/* شريط التنقل السفلي */
 .navbar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #1b1b1b;
+  background-color: #2f1717;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  border-top: 2px solid #d32f2f; /* أحمر مستوحى من العلم */
+  border-top: 2px solid #C62828;
 }
 
 .navbar a {
@@ -30,7 +30,7 @@ body {
 
 .navbar a.active,
 .navbar a:hover {
-  color: #4caf50; /* أخضر عراقي */
+  color: #C62828;
 }
 
 /* ===== صفحة الروابط ===== */
@@ -46,23 +46,20 @@ body {
 }
 
 .link-button {
-  background-color: #1e1e1e;
+  background-color: #2f1717;
   color: #fff;
-  border: 2px solid #4caf50; /* أخضر */
-  border-radius: 12px;
+  border: none;
+  border-radius: 10px;
   padding: 14px 30px;
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s;
   width: 220px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .link-button:hover {
-  background-color: #d32f2f; /* أحمر عند التمرير */
-  color: #fff;
-  border-color: #d32f2f;
+  background-color: #C62828;
 }
 
 /* ===== صفحة البروفايل ===== */
@@ -79,20 +76,20 @@ body {
   left: 0;
   width: 100%;
   height: 180px;
-  background: linear-gradient(to right, #d32f2f, #000, #4caf50);
+  background-color: #1e1f22;
   background-size: cover;
   background-position: center;
-  border-bottom: 3px solid #4caf50;
+  border-bottom: 3px solid #C62828;
 }
 
 /* الصورة + النص */
 .profile-top {
   position: absolute;
   bottom: -40px;
-  right: 10px;
+  right: 3px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 /* الصورة الشخصية */
@@ -100,11 +97,11 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #222;
-  border: 6px solid #d32f2f;
+  background-color: #1e1f22;
+  border: 8px solid #C62828;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* النص يسار الصورة */
@@ -113,73 +110,71 @@ body {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  color: #fff;
+  color: #C62828;
   position: relative;
   top: 25px;
   right: -10px;
 }
 
 .username {
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   margin: 0;
-  color: #4caf50; /* اسم المستخدم باللون الأخضر */
 }
 
-/* مربع العلم */
-.flag-box {
-  width: 28px;
-  height: 18px;
-  border-radius: 3px;
-  overflow: hidden;
-  margin-left: 8px;
-  border: 1px solid #fff;
-}
 
-.flag-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* بقية المعلومات */
+/* بقية المعلومات تحت */
 .profile-info {
-  margin-top: 90px;
+  margin-top: -30px;
   padding: 20px;
-  color: #ddd;
+  color: #fff;
   text-align: center;
 }
 
-/* مربعات السيرة / الانجازات / الاهداف */
+.member-since {
+  font-size: 14px;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* مربع عن نفسي */
 .about-me-box {
-  background-color: #1e1e1e;
-  color: #fff;
-  border-radius: 15px;
+  background-color: #2f1717;
+  color: #FF5252;
+  border-radius: 30px;
   padding: 17px;
   font-size: 15px;
   text-align: right;
   max-width: 360px;
   width: 90%;
   line-height: 1.7;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   transition: 0.3s;
-  margin-top: 25px;
-  border-left: 5px solid #4caf50;
+  margin-top: 29px; /* المربع تحت البروفايل */
 }
 
 .about-me-box h2 {
   margin-top: 0;
   margin-bottom: 8px;
   text-align: center;
-  color: #d32f2f;
 }
 
-/* للشاشات الكبيرة */
+/* للشاشات الكبيرة مثل الكمبيوتر واللابتوب */
 @media (min-width: 1024px) {
   .profile-avatar {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
+  .links-container {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+  }
 
+  .about-me-box {
+    max-width: 500px;
+    margin-top: 80px; /* نزله أكثر على الشاشات الكبيرة */
+  }
 }
