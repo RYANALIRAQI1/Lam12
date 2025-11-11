@@ -144,8 +144,8 @@ body {
 
 /* بقية المعلومات */
 .profile-info {
-  margin-top: 90px;
-  padding: 20px;
+  margin-top: -50px;
+  padding: 50px;
   color: #ddd;
   text-align: center;
 }
@@ -158,7 +158,7 @@ body {
   padding: 17px;
   font-size: 15px;
   text-align: right;
-  max-width: 360px;
+  max-width: 1300px;
   width: 90%;
   line-height: 1.7;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -182,7 +182,7 @@ body {
   }
 
   .about-me-box {
-    max-width: 1000px;
+    max-width: 1300px;
     margin-top: 100px;
   }
 }
